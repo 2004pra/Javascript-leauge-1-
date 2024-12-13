@@ -37,5 +37,7 @@ function solve(){
  console.log(n);
   
  // const n = 20;--> cannot be declared again 
+
+ //these are some of the good notes .
  
  
