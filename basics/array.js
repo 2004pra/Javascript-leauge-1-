@@ -103,10 +103,10 @@ let object = {
     ///built in methods of array 
     //1. push--> insert at end
     //2. pop--> remove 
-    //3. shift
-    //4. unshift
-    //5. splice
-    //6. slice
+    //3. shift--> remove from start
+    //4. unshift--> insert at start
+    //5. splice--> you can change the content of the array by removing or replacing the elements
+    //6. slice-->used to provide a range of elements and exclude the last index element 
     //7. indexOf
     //8. lastIndexOf
     //9. includes
@@ -117,3 +117,20 @@ let object = {
     //14. filter
     //15. reduce
     //16. sort
+
+     
+arr1.push("babbar");
+console.log(arr1);
+arr1.pop();
+console.log(arr1);
+arr1.shift();
+console.log(arr1);
+arr1.unshift("prashant");
+console.log(arr1);
+arr1.push(20);
+arr1.push(30);
+console.log(arr1);
+arr1.slice(2,4);
+console.log(arr1);
+// arr1.splice(1,2,'bora');
+// console.log(arr1);
