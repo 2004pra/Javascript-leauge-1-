@@ -107,16 +107,18 @@ let object = {
     //4. unshift--> insert at start
     //5. splice--> you can change the content of the array by removing or replacing the elements
     //6. slice-->used to provide a range of elements and exclude the last index element 
-    //7. indexOf
-    //8. lastIndexOf
-    //9. includes
+    //7. indexOf--> we can find the index of particular element
+     //8. lastIndexOf--> we can find the index of particular element from the last
+    //9. includes-->
     //10. concat
     //11. join
     //12. reverse
-    //13. map
-    //14. filter
-    //15. reduce
-    //16. sort
+    //13. map-->lets say we have an array of elementsand we want to perform square of every element by using function that function will be situated in map 
+
+    //14. filter--> lets say we have multiple data like [10,21,14,15,74,27]  these number will go to filter and decide if to include the number or not .
+    //15. reduce-->  again a good built in method . lets say we have an array [10,20,30,40] it has 2 variable accumulator--> it can be intialized if you dont it will take first value and current will take second value
+    //mainly it is used to perform some big  operation easily in reduce way .  
+    //16. sort--> lets assume we have an array which is not sorted so we will use it direcltly to sort the data.
 
      
 arr1.push("babbar");
@@ -132,5 +134,100 @@ arr1.push(30);
 console.log(arr1);
 arr1.slice(2,4);
 console.log(arr1);
-// arr1.splice(1,2,'bora');
-// console.log(arr1);
+arr1.splice(1,2,'bora');
+console.log(arr1);
+
+// let arr3 = [1, 2, 3, 4, 5];
+// let ansArray=arr3.map((number)=>{
+//     return number*number;
+// })
+//here every number is picked and then we store the square in answer array 
+// console.log(ansArray);
+//to print directly from map
+let arr3 = [1, 2, 3, 4, 5];
+arr3.map((number,index)=>{
+    console.log(number*number);
+    console.log(index);
+})
+
+let evenArray=arr3.filter((number) => {
+    // if(number%2==0){return true;
+    // }
+    // else{
+    //     return false;
+    // }
+    // we can write like this too
+    return number%2==0;
+})
+console.log(evenArray);
+
+
+let arr4 = [1, 2, 3, 4, 5];
+let sum=arr4.reduce((accumulator,current)=>{
+    return accumulator+current;
+},0);//this zero is the intialized value of accumulator
+//the single output is stored in accumulator and then it is added to the current value 
+
+console.log(sum);
+
+//sorting data
+let arr5 = [4,4,5,7,2,1,22,8,90];
+arr5.sort();
+//how to do sort in descending order
+console.log(arr5);
+arr5.sort((a,b)=>{
+    return b-a;
+})
+
+console.log(arr5);
+
+console.log(arr5.indexOf(4));
+
+//find inbuilt method --> it will return the first element which is found
+console.log(arr5.find((element)=>{
+    return element>5;
+})) 
+
+// 1 for each loop -->  to perform action on each elemnt of array 
+arr5.forEach((value,index)=>{
+    console.log("number:",value,"index:",index);
+})
+
+//for in--> 
+
+let obj={
+    name: 'prashant',
+    age: 23,
+    city: 'mumbai',
+    country: 'india',
+    greet : function(){
+        console.log('hello');
+    }
+};
+for(let key in obj){
+    console.log(key,obj[key]);
+}
+//keys are name age city country greet
+//values are prashant 23 mumbai india function
+
+
+//for of loop
+for(let value of arr5){
+    console.log(value);
+}
+// iterating on arrays and strings
+
+
+//how array behave with functions
+//for example we have to make some of all the element in array 
+let arr6 = [1, 2, 3, 4, 5];
+function getsum(arr6){
+    let len=arr6.length;
+    let sum=0;
+   for (let i=0;i<len;i++){
+       sum+=arr6[i];
+   }   
+   return sum; 
+}
+let totalsum=getsum(arr6);
+console.log(totalsum);
