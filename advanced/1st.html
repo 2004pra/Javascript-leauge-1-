@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <p id = "fpara" class="textMatter">first paragraph</p>
+    <p id = "fpara" class="textMatter">second paragraph</p>
+    <p id = "fpara" class="textMatter">third paragraph</p>
+    <h1 id="fheading" class="textMatter">First heading</h1>
+
+    <!-- // we can use getElementsByClassName and getElementById to select elements
+    //also can be done by getElementsByTagName
+     //we can use querselector(#idname,.classname,tag)  this is one of the better method 
+     //but it only select the first element to selct all we use  querySelectorAll
+
+     // if you select a elemnt it will show some dollar sign and if you write that in console it will dirctly tell the file in js 
+     // we can store these things in a varibale too 
+     //for example like var x = document.querySelector('.textMatter') -->
+
+     <!-- //how to update the existing content  ,, it has inner html , outer , text.content,innertext   using get and set --> 
+        <!-- for example there is button tag and if you write button.innerHTML  it will show the content inside html whatever tags are used under thi button tag  this way you can get
+         to set the content you can write button.innerHTML = "new content"  this way you can set the content -->
+         <!--  outer html is used to get the whole thing the main html tag and inside tags too and here we can alter the tag itself  -->
+
+         <div id="p">
+                <p>
+                    this is my first text
+                    <span>Text</span>
+                </p>
+                <p>
+                    This is my second para 
+                </p>
+         </div>
+
+         <!-- we can use textContent to know the no.of times enter was pressed what text is written  while if we 
+          use innerText  it give us the text considering part and the span tag enter the way it is showed in ui same will be shown using innerText 
+          the way it renders in ui will be the same in innertext and so we are now able to know inner text is always trying to render     -->
+
+          <!-- how to append child  so to append we first need to craete on using 
+           
+          ****** createElement
+          like  let fheading= document.createElement("h1");
+                 fheading.innnertext = "new heading";
+                    document.body.appendChild(fheading);
+                    whenever u=you use appendChild it will be added at the last  
+                 -->
+
+                 <!--  to add child at custom position we use insertAdjacentHTML 
+                   position are  - beforend,beforebegin,after begin,afterend -->
+                   <div>
+                    hello jee
+                    <div id ="mydiv">
+                        <p>first</p>
+                        <h1>second</h1>
+                        <p>third</p>
+                    </div>
+                   </div>
+ </body>
+ </html>
