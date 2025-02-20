@@ -55,8 +55,27 @@
 
 // lets try to change the default action of anchor tage 
 
-let anchor=document.querySelector("#fanchor");
-anchor.addEventListener("click",function(event){
-    event.preventDefault(); // to stop the default action of anchor tag
-    anchor.textContent = "click done by";
-})
+// let anchor=document.querySelector("#fanchor");
+// anchor.addEventListener("click",function(event){
+//     event.preventDefault(); // to stop the default action of anchor tag
+//     anchor.textContent = "click done by";
+// })
+
+// let paras = document.querySelectorAll("p");
+
+
+function alertPara(){
+    if(event.target.nodeName === "SPAN"){  //used for ony working on particular text
+alert("you have clicked on para:" + event.target.textContent);//target property to fetch the content  
+    } 
+}
+// for(let i=0;i<paras.length;i++){
+//     let para = paras[i];
+//     para.addEventListener("click",alertPara);
+// }
+let mydiv = document.getElementById('wrapper');
+document.addEventListener('click',alertPara);
+
+
+//dom conetent load use -->  it is used to load the content of the website first and then apply the js on it
+
