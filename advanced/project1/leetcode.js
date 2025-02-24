@@ -106,11 +106,4 @@ document.addEventListener("DOMContentLoaded", function () {
       fetchUserDetails(username);
     }
   });
-  this.body.addEventListener("keyup", function () {
-    const username = usernameInput.value;
-    console.log("login username", username);
-    if (validateUsername(username)) {
-      fetchUserDetails(username);
-    }
-  });
 });
